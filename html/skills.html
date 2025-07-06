@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/skills.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+        .skill-card {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+        .progress-bar {
+            transition: width 1s ease-in-out;
+        }
+        .dark .skill-card {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .dark .skill-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+    </style>
+</head>
+<body class="min-h-screen py-12 px-4 transition-colors duration-200">
+    <div class="fixed top-4 right-4 z-50">
+        <button id="themeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 transition-colors duration-200">
+            <i class="fas fa-moon dark:text-yellow-300 text-gray-700"></i>
+        </button>
+    </div>
+
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12" data-aos="fade-down">
+            <h1 class="text-5xl font-bold text-gray-800 dark:text-white mb-4">My Skills at a Glance</h1>
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <button class="filter-btn active px-4 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition-colors" data-filter="all">All</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-filter="frontend">Frontend</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-filter="backend">Backend</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-filter="database">Database</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-filter="languages">Languages</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-filter="tools">Tools</button>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Frontend Development -->
+            <div class="skill-card frontend" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-6 rounded-xl shadow-lg hover:shadow-xl bg-white dark:bg-gray-800 dark:text-white">
+                    <h2 class="text-2xl font-semibold mb-4">Frontend Development</h2>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-brands fa-js text-yellow-400 text-xl mr-2"></i>
+                                    <span class="font-medium">JavaScript</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-yellow-400 h-2.5 rounded-full" style="width: 0%" data-width="90"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-brands fa-react text-blue-400 text-xl mr-2"></i>
+                                    <span class="font-medium">React</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-blue-400 h-2.5 rounded-full" style="width: 0%" data-width="85"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-brands fa-html5 text-orange-500 text-xl mr-2"></i>
+                                    <span class="font-medium">HTML</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-orange-500 h-2.5 rounded-full" style="width: 0%" data-width="95"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-brands fa-css3-alt text-blue-500 text-xl mr-2"></i>
+                                    <span class="font-medium">CSS</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Basic</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Development -->
+            <div class="skill-card backend" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-6 rounded-xl shadow-lg hover:shadow-xl bg-white dark:bg-gray-800 dark:text-white">
+                    <h2 class="text-2xl font-semibold mb-4">Backend Development</h2>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-brands fa-node text-green-600 text-xl mr-2"></i>
+                                    <span class="font-medium">Node.js</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-green-600 h-2.5 rounded-full" style="width: 0%" data-width="85"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-brands fa-php text-purple-600 text-xl mr-2"></i>
+                                    <span class="font-medium">PHP</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-purple-600 h-2.5 rounded-full" style="width: 0%" data-width="75"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-brands fa-node text-green-600 text-xl mr-2"></i>
+                                    <span class="font-medium">Express.js</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-green-600 h-2.5 rounded-full" style="width: 0%" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Database -->
+            <div class="skill-card database" data-aos="fade-up" data-aos-delay="300">
+                <div class="p-6 rounded-xl shadow-lg hover:shadow-xl bg-white dark:bg-gray-800 dark:text-white">
+                    <h2 class="text-2xl font-semibold mb-4">Database</h2>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-solid fa-database text-blue-600 text-xl mr-2"></i>
+                                    <span class="font-medium">SQL</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-blue-600 h-2.5 rounded-full" style="width: 0%" data-width="90"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-solid fa-database text-green-500 text-xl mr-2"></i>
+                                    <span class="font-medium">MongoDB</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-green-500 h-2.5 rounded-full" style="width: 0%" data-width="85"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-brands fa-postgresql text-blue-400 text-xl mr-2"></i>
+                                    <span class="font-medium">PostgreSQL</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-blue-400 h-2.5 rounded-full" style="width: 0%" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Programming Languages -->
+            <div class="skill-card languages" data-aos="fade-up" data-aos-delay="400">
+                <div class="p-6 rounded-xl shadow-lg hover:shadow-xl bg-white dark:bg-gray-800 dark:text-white">
+                    <h2 class="text-2xl font-semibold mb-4">Programming Languages</h2>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-brands fa-java text-red-500 text-xl mr-2"></i>
+                                    <span class="font-medium">Java</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-red-500 h-2.5 rounded-full" style="width: 0%" data-width="85"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-brands fa-cuttlefish text-blue-600 text-xl mr-2"></i>
+                                    <span class="font-medium">C++</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Basic</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-blue-600 h-2.5 rounded-full" style="width: 0%" data-width="75"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-brands fa-python text-blue-500 text-xl mr-2"></i>
+                                    <span class="font-medium">Python</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="80"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-brands fa-c text-blue-800 text-xl mr-2"></i>
+                                    <span class="font-medium">C</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-blue-800 h-2.5 rounded-full" style="width: 0%" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Frameworks -->
+            <div class="skill-card tools" data-aos="fade-up" data-aos-delay="500">
+                <div class="p-6 rounded-xl shadow-lg hover:shadow-xl bg-white dark:bg-gray-800 dark:text-white">
+                    <h2 class="text-2xl font-semibold mb-4">Tools & Frameworks</h2>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-brands fa-git-alt text-orange-600 text-xl mr-2"></i>
+                                    <span class="font-medium">Git</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Basic</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-orange-600 h-2.5 rounded-full" style="width: 0%" data-width="90"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-brands fa-bootstrap text-purple-500 text-xl mr-2"></i>
+                                    <span class="font-medium">Bootstrap</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-purple-500 h-2.5 rounded-full" style="width: 0%" data-width="85"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-brands fa-tailwindcss text-teal-500 text-xl mr-2"></i>
+                                    <span class="font-medium">Tailwind CSS</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-teal-500 h-2.5 rounded-full" style="width: 0%" data-width="90"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <i class="fa-brands fa-postman text-orange-500 text-xl mr-2"></i>
+                                    <span class="font-medium">Postman</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                                <div class="progress-bar bg-orange-500 h-2.5 rounded-full" style="width: 0%" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/skills.js"></script>
+     <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> rautkrishno@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +91 7029556317</p>
+                <p><i class="fas fa-map-marker-alt"></i> Kolkata, India</p>
+            </div>
+            <div class="footer-section">
+                <h3>Social &nbsp; Links</h3>
+                <div class="social-links">
+                    <a href="https://github.com/Krishna-007-ninja" target="_blank" class="social-link github"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/krishn-dev/" target="_blank" class="social-link linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-link twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/ezscripter/" target="_blank" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick &nbsp;Links</h3>
+                <a href="./">Home</a>
+                <a href="./">About</a>
+                <a href="./">Projects</a>
+                <a href="./">Contact</a>
+                <a href="./assets/Krishna_Resume_2025.pdf" download>Download Resume</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Krishna. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
