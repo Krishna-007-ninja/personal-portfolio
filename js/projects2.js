@@ -33,7 +33,7 @@ class ProjectDemo {
         this.projectData = {
             title: 'Spotify UI Clone (Frontend Only)',
             image: '../assets/spotifyClone.jpg',
-            description: 'A web-based platform built with PHP and MySQL that allows colleges to manage, create, and organize events, enabling to reduce the process of cycling to conduct the events and admins to track events effectively.'
+            description: 'A responsive music streaming interface cloned from Spotify, built using only HTML and CSS. It replicates the layout and design without any backend functionality.'
         };
         
         this.init();

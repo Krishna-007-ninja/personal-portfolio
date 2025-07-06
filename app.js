@@ -110,7 +110,7 @@ const projects = [
     {
         title: 'Wanderstay',
         description: 'Full Stack airbnb stay vacation rental app built with  Node.js, Express.js and MongoDB',
-        image: '/assets/airbnb.png',
+        image: './assets/airbnb.png',
         link: 'https://wanderstay-oakz.onrender.com',
         demoLink: 'https://wanderstay-oakz.onrender.com',
         codeLink: 'https://github.com/Krishna-007-ninja/wanderstay'
